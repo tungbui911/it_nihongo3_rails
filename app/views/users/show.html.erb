@@ -1,4 +1,8 @@
 <h1>Profile</h1>
 <h3>メールアドレス</h3>
 <p><%= current_user.email %></p>
+<% if current_user.avatar.attached? %>
+    <label>Avatar:</label>
+    <%= image_tag current_user.avatar, width: "200" %>
+<% end %>
 <a href='/books'>本一覧を見る</a>
